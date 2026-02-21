@@ -41,7 +41,7 @@ gem "thruster", require: false
 
 gem "dartsass-rails"
 gem "bootstrap", "5.3.3"
-gem "minitest", "~> 5.22"
+gem "minitest", "~> 6.0"
 gem "pg"
 
 group :development, :test do
