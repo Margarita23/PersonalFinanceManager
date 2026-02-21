@@ -40,7 +40,7 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 gem "dartsass-rails"
-gem "bootstrap", "5.3.3"
+gem "bootstrap", "5.3.8"
 gem "minitest", "~> 5.22"
 gem "pg"
 
