@@ -1,12 +1,18 @@
 class OperationsController < ApplicationController
+  before_action :require_login
   before_action :set_operation, only: %i[ show edit update destroy ]
   before_action :set_categories
   before_action :set_category_name, only: %i[ index ]
   
   # GET /operations or /operations.json
   def index
-    categoryId = params[:queryCategoryId]
-    @operations = categoryId.nil? ? Operation.all : Operation.where(category_id: categoryId)
+    if params[:queryCategoryId].present?
+      @operations = current_user.categories.find(params[:queryCategoryId]).operations
+    else
+      @operations = current_user.operations
+      # @operations = Operation.joins(:category)
+                            #  .where(categories: { user_id: current_user.id })
+    end
   end
 
   # GET /operations/1 or /operations/1.json
@@ -24,7 +30,9 @@ class OperationsController < ApplicationController
 
   # POST /operations or /operations.json
   def create
-    @operation = Operation.new(operation_params)
+    category = current_user.categories.find(operation_params[:category_id])
+    @operation = category.operations.build(operation_params.except(:category_id))
+    # @operation = Operation.new(operation_params)
 
     respond_to do |format|
       if @operation.save
@@ -63,15 +71,18 @@ class OperationsController < ApplicationController
   private
 
     def set_operation
-      @operation = Operation.find(params[:id])
+      @operation = Operation.joins(:category)
+                          .where(categories: { user_id: current_user.id })
+                          .find(params[:id])
+      # @operation = Operation.find(params[:id])
     end
 
     def set_category_name
-      @category_name = Category.find_by_id(params[:queryCategoryId])&.name
+      @category_name = current_user.categories.find_by_id(params[:queryCategoryId])&.name
     end
 
     def set_categories
-      @categories = Category.all
+      @categories = current_user.categories
     end
 
     def operation_params
