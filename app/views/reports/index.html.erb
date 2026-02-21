@@ -1,0 +1,11 @@
+<h2>Звіти</h2>
+
+<% if @operations.empty? %>
+    <span class="text-muted">
+        Для генерування звітів у вас має бути мінімум одна транзакція.
+    </span>
+<% else %>
+    <%= render "form" %>
+<% end %>
+
+

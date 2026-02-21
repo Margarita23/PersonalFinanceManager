@@ -1,0 +1,47 @@
+<%= form_with method: :get, class: "custom-form" do |form| %>
+
+  <div>
+    <%= form.label "Дата початку", class: "form-label" %>
+    <%= form.date_field :start, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label "Кінцева дата", class: "form-label" %>
+    <%= form.date_field :end, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :otype, "Тип операції", class: "form-label" %>
+    <%= form.select :otype, {}, {}, class:"form-select" do %>
+      <option class="select-item" value=<%= nil %>>
+        <p>Дохід та витрати</p>
+      </option>
+      <option class="select-item" value=<%= :income %>>
+        <p>Дохід</p>
+      </option>
+      <option class="select-item" value=<%= :expense %>>
+        <p>Витрата</p>
+      </option>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label "Назва категорії", class: "form-label" %>
+    
+    <%= form.select :ocategory, {}, {}, class:"form-select" do %>
+      <option selected>Вибрати категорію</option>
+      <% @categories.each do |category| %>
+        <option class="select-item" value=<%=category.id%>>
+          <p><%= category.name %></p>
+        </option>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Згенерувати звіт (розподіл за категоріями)", formaction: reports_report_by_category_path, class: "btn btn-primary" %>
+    <%= form.submit "Згенерувати звіт (розподіл по датам)", formaction: reports_report_by_dates_path, class: "btn btn-primary" %>
+  </div>
+
+<% end %>
+

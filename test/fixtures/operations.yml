@@ -1,0 +1,588 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 9.99
+  odate: 2026-02-03 08:30:27
+  description: Bonuses
+  otype: income
+  category: one
+
+two:
+  amount: 9.99
+  odate: 2026-02-03 08:30:27
+  description: Cashback
+  otype: income
+  category: two
+
+food_1:
+  amount: 120.50
+  odate: 2026-01-02
+  description: Супермаркет
+  otype: expense
+  category: Food
+
+food_2:
+  amount: 45.00
+  odate: 2026-01-05
+  description: Кафе
+  otype: expense
+  category: Food
+
+food_3:
+  amount: 89.30
+  odate: 2026-01-10
+  description: Продукти
+  otype: expense
+  category: Food
+
+food_4:
+  amount: 32.40
+  odate: 2026-01-15
+  description: Кава
+  otype: expense
+  category: Food
+
+food_5:
+  amount: 150.00
+  odate: 2026-01-20
+  description: Ресторан
+  otype: expense
+  category: Food
+
+food_6:
+  amount: 60.00
+  odate: 2026-02-01
+  description: Доставка їжі
+  otype: expense
+  category: Food
+
+food_7:
+  amount: 110.25
+  odate: 2026-02-05
+  description: Супермаркет
+  otype: expense
+  category: Food
+
+food_8:
+  amount: 25.00
+  odate: 2026-02-10
+  description: Перекус
+  otype: expense
+  category: Food
+
+food_9:
+  amount: 75.80
+  odate: 2026-02-15
+  description: Продукти
+  otype: expense
+  category: Food
+
+food_10:
+  amount: 95.00
+  odate: 2026-02-20
+  description: Ринок
+  otype: expense
+  category: Food
+
+
+# ===== Транспорт =====
+transport_1:
+  amount: 20.00
+  odate: 2026-01-03
+  description: Метро
+  otype: expense
+  category: Transport
+
+transport_2:
+  amount: 50.00
+  odate: 2026-01-08
+  description: Паливо
+  otype: expense
+  category: Transport
+
+transport_3:
+  amount: 15.00
+  odate: 2026-01-12
+  description: Автобус
+  otype: expense
+  category: Transport
+
+transport_4:
+  amount: 200.00
+  odate: 2026-01-18
+  description: СТО
+  otype: expense
+  category: Transport
+
+transport_5:
+  amount: 35.00
+  odate: 2026-01-22
+  description: Таксі
+  otype: expense
+  category: Transport
+
+transport_6:
+  amount: 60.00
+  odate: 2026-02-02
+  description: Паливо
+  otype: expense
+  category: Transport
+
+transport_7:
+  amount: 18.00
+  odate: 2026-02-07
+  description: Метро
+  otype: expense
+  category: Transport
+
+transport_8:
+  amount: 90.00
+  odate: 2026-02-11
+  description: Квитки
+  otype: expense
+  category: Transport
+
+transport_9:
+  amount: 40.00
+  odate: 2026-02-17
+  description: Таксі
+  otype: expense
+  category: Transport
+
+transport_10:
+  amount: 70.00
+  odate: 2026-02-23
+  description: Паливо
+  otype: expense
+  category: Transport
+
+# ===== Житло =====
+housing_1:
+  amount: 8000.00
+  odate: 2026-01-01
+  description: Оренда
+  otype: expense
+  category: Housing
+
+housing_2:
+  amount: 8000.00
+  odate: 2026-02-01
+  description: Оренда
+  otype: expense
+  category: Housing
+
+housing_3:
+  amount: 1500.00
+  odate: 2026-01-10
+  description: Ремонт
+  otype: expense
+  category: Housing
+
+housing_4:
+  amount: 900.00
+  odate: 2026-01-20
+  description: Меблі
+  otype: expense
+  category: Housing
+
+housing_5:
+  amount: 1200.00
+  odate: 2026-02-05
+  description: Побутова техніка
+  otype: expense
+  category: Housing
+
+housing_6:
+  amount: 300.00
+  odate: 2026-02-10
+  description: Дрібний ремонт
+  otype: expense
+  category: Housing
+
+housing_7:
+  amount: 450.00
+  odate: 2026-02-15
+  description: Інтер'єр
+  otype: expense
+  category: Housing
+
+housing_8:
+  amount: 600.00
+  odate: 2026-02-18
+  description: Декор
+  otype: expense
+  category: Housing
+
+housing_9:
+  amount: 200.00
+  odate: 2026-02-22
+  description: Лампочки
+  otype: expense
+  category: Housing
+
+housing_10:
+  amount: 350.00
+  odate: 2026-02-25
+  description: Інструменти
+  otype: expense
+  category: Housing
+
+
+# ===== Комунальні послуги =====
+utilities_1:
+  amount: 1200.00
+  odate: 2026-01-05
+  description: Електроенергія
+  otype: expense
+  category: Utilities
+
+utilities_2:
+  amount: 800.00
+  odate: 2026-01-07
+  description: Вода
+  otype: expense
+  category: Utilities
+
+utilities_3:
+  amount: 600.00
+  odate: 2026-01-09
+  description: Газ
+  otype: expense
+  category: Utilities
+
+utilities_4:
+  amount: 400.00
+  odate: 2026-01-15
+  description: Інтернет
+  otype: expense
+  category: Utilities
+
+utilities_5:
+  amount: 1300.00
+  odate: 2026-02-05
+  description: Електроенергія
+  otype: expense
+  category: Utilities
+
+utilities_6:
+  amount: 750.00
+  odate: 2026-02-07
+  description: Вода
+  otype: expense
+  category: Utilities
+
+utilities_7:
+  amount: 650.00
+  odate: 2026-02-09
+  description: Газ
+  otype: expense
+  category: Utilities
+
+utilities_8:
+  amount: 420.00
+  odate: 2026-02-15
+  description: Інтернет
+  otype: expense
+  category: Utilities
+
+utilities_9:
+  amount: 500.00
+  odate: 2026-02-20
+  description: Обслуговування
+  otype: expense
+  category: Utilities
+
+utilities_10:
+  amount: 300.00
+  odate: 2026-02-25
+  description: Вивіз сміття
+  otype: expense
+  category: Utilities
+
+
+# ===== Охорона здоров’я =====
+health_1:
+  amount: 500.00
+  odate: 2026-01-04
+  description: Лікар
+  otype: expense
+  category: Healthcare
+
+health_2:
+  amount: 300.00
+  odate: 2026-01-11
+  description: Ліки
+  otype: expense
+  category: Healthcare
+
+health_3:
+  amount: 700.00
+  odate: 2026-01-18
+  description: Аналізи
+  otype: expense
+  category: Healthcare
+
+health_4:
+  amount: 250.00
+  odate: 2026-01-25
+  description: Аптека
+  otype: expense
+  category: Healthcare
+
+health_5:
+  amount: 600.00
+  odate: 2026-02-03
+  description: Стоматолог
+  otype: expense
+  category: Healthcare
+
+health_6:
+  amount: 200.00
+  odate: 2026-02-08
+  description: Ліки
+  otype: expense
+  category: Healthcare
+
+health_7:
+  amount: 450.00
+  odate: 2026-02-12
+  description: Консультація
+  otype: expense
+  category: Healthcare
+
+health_8:
+  amount: 800.00
+  odate: 2026-02-16
+  description: Обстеження
+  otype: expense
+  category: Healthcare
+
+health_9:
+  amount: 150.00
+  odate: 2026-02-21
+  description: Вітаміни
+  otype: expense
+  category: Healthcare
+
+health_10:
+  amount: 1000.00
+  odate: 2026-02-27
+  description: Операція
+  otype: expense
+  category: Healthcare
+
+
+# ===== Розваги =====
+entertainment_1:
+  amount: 300.00
+  odate: 2026-01-06
+  description: Кіно
+  otype: expense
+  category: Entertainment
+
+entertainment_2:
+  amount: 500.00
+  odate: 2026-01-13
+  description: Концерт
+  otype: expense
+  category: Entertainment
+
+entertainment_3:
+  amount: 200.00
+  odate: 2026-01-19
+  description: Підписка
+  otype: expense
+  category: Entertainment
+
+entertainment_4:
+  amount: 350.00
+  odate: 2026-01-26
+  description: Театр
+  otype: expense
+  category: Entertainment
+
+entertainment_5:
+  amount: 250.00
+  odate: 2026-02-04
+  description: Кіно
+  otype: expense
+  category: Entertainment
+
+entertainment_6:
+  amount: 450.00
+  odate: 2026-02-09
+  description: Вистава
+  otype: expense
+  category: Entertainment
+
+entertainment_7:
+  amount: 600.00
+  odate: 2026-02-14
+  description: Фестиваль
+  otype: expense
+  category: Entertainment
+
+entertainment_8:
+  amount: 150.00
+  odate: 2026-02-18
+  description: Ігри
+  otype: expense
+  category: Entertainment
+
+entertainment_9:
+  amount: 700.00
+  odate: 2026-02-22
+  description: Концерт
+  otype: expense
+  category: Entertainment
+
+entertainment_10:
+  amount: 100.00
+  odate: 2026-02-26
+  description: Підписка
+  otype: expense
+  category: Entertainment
+
+
+# ===== Освіта =====
+education_1:
+  amount: 2000.00
+  odate: 2026-01-03
+  description: Онлайн курс
+  otype: expense
+  category: Education
+
+education_2:
+  amount: 500.00
+  odate: 2026-01-14
+  description: Книга
+  otype: expense
+  category: Education
+
+education_3:
+  amount: 1500.00
+  odate: 2026-01-21
+  description: Семінар
+  otype: expense
+  category: Education
+
+education_4:
+  amount: 300.00
+  odate: 2026-01-28
+  description: Матеріали
+  otype: expense
+  category: Education
+
+education_5:
+  amount: 2200.00
+  odate: 2026-02-02
+  description: Курс програмування
+  otype: expense
+  category: Education
+
+education_6:
+  amount: 450.00
+  odate: 2026-02-06
+  description: Книга
+  otype: expense
+  category: Education
+
+education_7:
+  amount: 1700.00
+  odate: 2026-02-13
+  description: Тренінг
+  otype: expense
+  category: Education
+
+education_8:
+  amount: 350.00
+  odate: 2026-02-17
+  description: Вебінар
+  otype: expense
+  category: Education
+
+education_9:
+  amount: 600.00
+  odate: 2026-02-24
+  description: Матеріали
+  otype: expense
+  category: Education
+
+education_10:
+  amount: 800.00
+  odate: 2026-02-28
+  description: Сертифікація
+  otype: expense
+  category: Education
+
+
+# ===== Покупки =====
+shopping_1:
+  amount: 1200.00
+  odate: 2026-01-04
+  description: Одяг
+  otype: expense
+  category: Shopping
+
+shopping_2:
+  amount: 3000.00
+  odate: 2026-01-16
+  description: Телефон
+  otype: expense
+  category: Shopping
+
+shopping_3:
+  amount: 500.00
+  odate: 2026-01-23
+  description: Взуття
+  otype: expense
+  category: Shopping
+
+shopping_4:
+  amount: 700.00
+  odate: 2026-01-29
+  description: Аксесуари
+  otype: expense
+  category: Shopping
+
+shopping_5:
+  amount: 2500.00
+  odate: 2026-02-03
+  description: Ноутбук
+  otype: expense
+  category: Shopping
+
+shopping_6:
+  amount: 400.00
+  odate: 2026-02-07
+  description: Косметика
+  otype: expense
+  category: Shopping
+
+shopping_7:
+  amount: 1500.00
+  odate: 2026-02-12
+  description: Куртка
+  otype: expense
+  category: Shopping
+
+shopping_8:
+  amount: 650.00
+  odate: 2026-02-19
+  description: Подарунок
+  otype: expense
+  category: Shopping
+
+shopping_9:
+  amount: 900.00
+  odate: 2026-02-23
+  description: Побутові речі
+  otype: expense
+  category: Shopping
+
+shopping_10:
+  amount: 1100.00
+  odate: 2026-02-27
+  description: Одяг
+  otype: expense
+  category: Shopping

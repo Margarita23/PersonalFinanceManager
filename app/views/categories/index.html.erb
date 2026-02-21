@@ -1,0 +1,50 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Categories" %>
+
+<%= link_to "Додати нову категорію", new_category_path, type: "button", class: "btn btn-primary" %>
+
+<h2>Категорії витрат / доходів</h2>
+
+<div data-controller="categories">
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Введіть перші літери назви категорії"
+    data-action="input->categories#filter"
+    data-categories-target="input"
+    id="categoriesSearch"
+  >
+
+  <table id="categories" class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Назва</th>
+        <th scope="col">Опис</th>
+        <th scope="col">Управління</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each_with_index do |category, index| %>
+        <tr data-categories-target="row">
+          <th scope="row"><%= index + 1 %></th>
+          <td><%= category.name %></td>
+          <td><%= category.description %></td>
+          <td class="actions">
+            <%= link_to "Редагувати", edit_category_path(category), type: "button", class: "btn btn-primary" %>
+            <%= button_to "Видалити",
+              category,
+              method: :delete,
+              class: "btn btn-danger"
+            %>
+            <% if category.operations.any? %>
+              <span class="error-msg">*Увага! У системі є транзакції, які мають дану категорію. Якщо видалити категорію, транзакції, які належать цій категорії теж будуть видалені.</span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

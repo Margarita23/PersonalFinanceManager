@@ -1,0 +1,20 @@
+<%= link_to "< Перегенерувати звіт", reports_path, class: "btn btn-secondary" %>
+
+<h2>Звіт по витратах/доходах в розрізі категорій</h2>
+
+<% if @report[:otype] === "income" && @report[:income].all? {|el| el == 0} %>
+  <p class="text-muted">Немає транзакцій доходу для відображення гістограми.</p>
+<% elsif @report[:otype] === "expense" && @report[:expense].all? {|el| el == 0} %>
+  <p class="text-muted">Немає транзакцій витрат для відображення гістограми.</p>
+<% elsif @report[:labels].present? %>
+  <div class="report-container" style="position: relative; height: 400px; max-width: 800px;">
+    <canvas
+      data-controller="report"
+      data-report-type-value="pie"
+      data-report-otype-value="<%= @report[:otype] %>"
+      data-report-labels-value="<%= @report[:labels].to_json %>"
+      data-report-income-value="<%= @report[:income].to_json %>"
+			data-report-expense-value="<%= @report[:expense].to_json %>">
+    </canvas>
+  </div>
+<% end %>

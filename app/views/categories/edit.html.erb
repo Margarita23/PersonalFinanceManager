@@ -1,0 +1,7 @@
+<% content_for :title, "Редагування інформації про категорії" %>
+
+<%= link_to "< Назад до списку категорій", categories_path, class: "btn btn-secondary" %>
+
+<h2>Редагування інформації про категорію витрат / доходів</h2>
+
+<%= render "form", category: @category %>

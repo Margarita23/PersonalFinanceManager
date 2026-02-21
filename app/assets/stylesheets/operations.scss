@@ -1,0 +1,13 @@
+// Sassy
+.custom-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.new-category-error-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}

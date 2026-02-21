@@ -1,0 +1,56 @@
+<%= form_with model: operation, class: "custom-form" do |form| %>
+  <% if operation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(operation.errors.count, "error") %> prohibited this operation from being saved:</h2>
+
+      <ul>
+        <% operation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <%= form.label "Назва категорії", class: "form-label" %>
+    
+    <%= form.select :category_id, {}, {}, class:"form-select" do %>
+      <% @categories.each do |category| %>
+        <option class="select-item" value=<%=category.id%>>
+          <p><%= category.name %></p>
+        </option>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <%= form.label :otype, "Тип операції", class: "form-label" %>
+    <%= form.select :otype, {}, {}, class: "form-select" do %>
+      <option class="select-item" value=<%= :income %>>
+        <p>Дохід</p>
+      </option>
+      <option class="select-item" value=<%= :expense %>>
+        <p>Витрата</p>
+      </option>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <%= form.label "Сума", class: "form-label" %>
+    <%= form.text_field :amount, class: "form-control" %>
+  </div>
+
+  <div class="row">
+    <%= form.label "Короткий опис", class: "form-label" %>
+    <%= form.text_field :description, class: "form-control" %>
+  </div>
+
+  <div class="row">
+    <%= form.label "Дата", class: "form-label"%>
+    <%= form.date_field :odate, class: "form-control" %>
+  </div>
+
+  <div class="row">
+    <%= form.submit operation.persisted? ? "Оновити" : "Створити", class: "btn btn-success" %>
+  </div>
+<% end %>

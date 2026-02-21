@@ -1,0 +1,56 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Транзакції" %>
+
+<% if @categories.empty? %>
+  <div class="new-category-error-block">
+    <span class="error-msg">*Увага! Транзакції мають відноситись до категорій. Створіть хоча б одну категорію, щою почати додавати транзакцію.</span>
+    <%= link_to "Додати нову категорію", new_category_path, type: "button", class: "btn btn-primary" %>
+  <div>
+<% else %>
+  <%= link_to "Додати нову транзакцію", new_operation_path, type: "button", class: "btn btn-primary" %>
+<% end %>
+
+<h2>Транзакції</h2>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <%= params[:queryCategoryId].presence ? @category_name : "Всі транзакції" %>
+  </button>
+  <ul class="dropdown-menu">
+    <%= link_to "Всі транзакції", operations_path, class: "dropdown-item" %>
+    <% @categories.each do |category| %>
+      <%= link_to category.name, operations_path(queryCategoryId: category.id), class: "dropdown-item" %>
+    <% end %>
+  </ul>
+</div>
+
+<table id="operations" class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Категорії</th>
+      <th scope="col">Тип операції</th>
+      <th scope="col">Сума</th>
+      <th scope="col">Дата</th>
+      <th scope="col">Опис</th>
+      <th scope="col">Управління</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @operations.each_with_index do |operation, index| %>
+      <tr>
+        <th scope="row"><%= index + 1 %></th>
+        <td><%= operation.category.name %></td>
+        <td><%= operation.otype_human %></td>
+        <td><%= operation.amount %></td>
+        <td><%= operation.odate %></td>
+        <td><%= operation.description %></td>
+        <td class="actions">
+          <%= link_to "Редагувати", edit_operation_path(operation), type: "button", class: "btn btn-primary" %>
+          <%= button_to "Видалити", operation, method: :delete, type: "button", class: "btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

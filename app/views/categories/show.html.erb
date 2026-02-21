@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= link_to "< Назад до списку категорій", categories_path, type: "button", class: "btn btn-secondary" %>
+
+<%= render @category %>
+
+<div class="actions">
+  <%= link_to "Редагувати категорію", edit_category_path(@category), class: "btn btn-primary" %>
+  <%= button_to "Видалити категорію", @category, method: :delete, class: "btn btn-danger" %>
+</div>
